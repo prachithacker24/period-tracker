@@ -169,17 +169,17 @@ const Calendar = ({ entries, predictions = [], onDeleteEntry }) => {
           font-size: 2rem;
           font-weight: 800;
           letter-spacing: 0.12em;
-          text-shadow: 0 4px 15px rgba(0,0,0,0.3);
-          color: white;
+          text-shadow: 0 4px 15px rgba(0,0,0,0.1);
+          color: var(--text-dark);
         }
 
         .month-grid-container {
-          background: rgba(255, 255, 255, 0.1);
+          background: rgba(255, 255, 255, 0.4);
           backdrop-filter: blur(20px);
           border-radius: 32px;
           padding: 1.8rem;
-          box-shadow: 0 25px 60px rgba(0,0,0,0.3);
-          border: 1px solid rgba(255,255,255,0.15);
+          box-shadow: 0 15px 40px rgba(66, 13, 59, 0.08);
+          border: 1px solid rgba(255,255,255,1);
           width: 100%;
           max-width: 450px;
         }
@@ -192,7 +192,7 @@ const Calendar = ({ entries, predictions = [], onDeleteEntry }) => {
           font-weight: 900;
           font-size: 0.75rem;
           opacity: 0.7;
-          color: white;
+          color: var(--text-dark);
         }
 
         .days-grid {
@@ -213,6 +213,7 @@ const Calendar = ({ entries, predictions = [], onDeleteEntry }) => {
           border-radius: 12px;
           transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           cursor: pointer;
+          color: var(--text-dark);
         }
 
         .day-cell:hover:not(.day-future):not(.day-padding) {
@@ -227,25 +228,25 @@ const Calendar = ({ entries, predictions = [], onDeleteEntry }) => {
           cursor: default;
         }
 
-        /* Actual Period Style (Dark Red Blurry) */
+        /* Actual Period Style (Light Red Blurry) */
         .day-actual {
-          background: rgba(139, 0, 0, 0.7) !important;
+          background: rgba(255, 107, 107, 0.6) !important;
           backdrop-filter: blur(8px);
-          box-shadow: 0 5px 20px rgba(139, 0, 0, 0.4);
-          border: 1px solid rgba(139, 0, 0, 0.5);
+          box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+          border: 1px solid rgba(255, 107, 107, 0.4);
         }
 
         /* Predicted Period Style (Light Pink Blurry) */
         .day-predicted {
-          background: rgba(255, 182, 193, 0.5) !important;
+          background: rgba(255, 192, 203, 0.4) !important;
           backdrop-filter: blur(8px);
-          box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          animation: pulsePredicted 2s infinite ease-in-out;
+          box-shadow: 0 5px 15px rgba(255, 192, 203, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          animation: pulsePredicted 2.4s infinite ease-in-out;
         }
 
         @keyframes pulsePredicted {
-          0%, 100% { opacity: 0.8; }
+          0%, 100% { opacity: 0.6; }
           50% { opacity: 1; }
         }
 

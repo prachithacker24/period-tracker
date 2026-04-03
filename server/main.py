@@ -5,6 +5,7 @@ from typing import List, Optional
 import uvicorn
 import models
 import schemas
+import os
 from database import engine, get_db
 from auth import get_password_hash, verify_password
 
@@ -210,4 +211,8 @@ def delete_period_entry(
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000))
+    )

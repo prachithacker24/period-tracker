@@ -52,12 +52,14 @@ const BottomNav = ({ activeTab, setActiveTab }) => {
           left: 0;
           right: 0;
           height: 100px;
-          background: #880E4F; /* Deep purple from image */
+          background: rgba(42, 13, 59, 0.95);
+          backdrop-filter: blur(20px);
           display: flex;
           justify-content: space-around;
           align-items: center;
           padding: 0 1rem;
           z-index: 2000;
+          box-shadow: 0 -10px 40px rgba(0,0,0,0.1);
         }
 
         .nav-btn {
@@ -67,14 +69,14 @@ const BottomNav = ({ activeTab, setActiveTab }) => {
           gap: 6px;
           background: transparent;
           border: none;
-          color: rgba(255, 255, 255, 0.6);
+          color: rgba(255, 255, 255, 0.5);
           cursor: pointer;
           transition: all 0.2s ease;
           flex: 1;
         }
 
         .nav-btn.active {
-          color: white;
+          color: var(--accent-magenta);
         }
 
         .nav-btn .icon {

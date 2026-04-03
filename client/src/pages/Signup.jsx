@@ -65,7 +65,7 @@ const Signup = () => {
         .shape-1 {
           width: 400px;
           height: 400px;
-          background: #a855f7;
+          background: var(--secondary-magenta);
           top: -100px;
           left: -100px;
           animation: float 6s ease-in-out infinite;
@@ -74,7 +74,7 @@ const Signup = () => {
         .shape-2 {
           width: 300px;
           height: 300px;
-          background: #7e22ce;
+          background: var(--accent-magenta);
           bottom: -50px;
           right: -50px;
           animation: float 8s ease-in-out infinite reverse;
@@ -83,7 +83,7 @@ const Signup = () => {
         .shape-3 {
           width: 200px;
           height: 200px;
-          background: #c084fc;
+          background: var(--primary-lilac);
           top: 30%;
           right: 15%;
           animation: float 7s ease-in-out infinite;
@@ -114,61 +114,63 @@ const Signup = () => {
         }
 
         .clerk-card {
-          background: rgba(36, 21, 56, 0.95) !important;
+          background: rgba(255, 255, 255, 0.9) !important;
           backdrop-filter: blur(20px) !important;
-          border: 1px solid rgba(168, 85, 247, 0.3) !important;
-          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 20px rgba(168, 85, 247, 0.2) !important;
+          border: 1px solid rgba(239, 71, 188, 0.15) !important;
+          box-shadow: 0 10px 30px rgba(66, 13, 59, 0.05), 0 0 20px rgba(239, 71, 188, 0.1) !important;
         }
 
         .clerk-title {
-          color: #e9d5ff !important;
+          color: var(--text-dark) !important;
           font-family: inherit !important;
+          font-weight: 800 !important;
         }
 
         .clerk-subtitle {
-          color: #a1a1aa !important;
+          color: var(--gray-500) !important;
         }
 
         .clerk-social-button {
-          background-color: rgba(30, 20, 50, 0.6) !important;
-          border-color: rgba(168, 85, 247, 0.3) !important;
-          color: #e9d5ff !important;
+          background-color: white !important;
+          border-color: rgba(239, 71, 188, 0.2) !important;
+          color: var(--text-dark) !important;
         }
 
         .clerk-submit-button {
-          background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%) !important;
-          box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4) !important;
+          background: var(--accent-magenta) !important;
+          box-shadow: 0 4px 12px rgba(239, 71, 188, 0.2) !important;
         }
 
         .clerk-label {
-          color: #d1d5db !important;
+          color: var(--text-dark) !important;
+          opacity: 0.8;
         }
 
         .clerk-input {
-          background-color: rgba(15, 10, 25, 0.6) !important;
-          border-color: rgba(168, 85, 247, 0.2) !important;
-          color: white !important;
+          background-color: rgba(255, 255, 255, 0.8) !important;
+          border-color: rgba(239, 71, 188, 0.1) !important;
+          color: var(--text-dark) !important;
         }
 
         .clerk-input:focus {
-          border-color: #a855f7 !important;
-          box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2) !important;
+          border-color: var(--accent-magenta) !important;
+          box-shadow: 0 0 0 2px rgba(239, 71, 188, 0.1) !important;
         }
 
         .clerk-divider {
-          background-color: rgba(168, 85, 247, 0.2) !important;
+          background-color: rgba(239, 71, 188, 0.1) !important;
         }
 
         .clerk-divider-text {
-          color: #71717a !important;
+          color: var(--gray-500) !important;
         }
 
         .clerk-link {
-          color: #c084fc !important;
+          color: var(--accent-magenta) !important;
         }
 
         .clerk-link:hover {
-          color: #a855f7 !important;
+          color: var(--text-dark) !important;
         }
       `}</style>
     </div>

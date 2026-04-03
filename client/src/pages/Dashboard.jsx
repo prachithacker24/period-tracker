@@ -229,14 +229,15 @@ const Dashboard = () => {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background: rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(5px);
+          background: rgba(255, 255, 255, 0.4);
+          backdrop-filter: blur(8px);
         }
 
         .user-greeting {
           font-weight: 800;
           font-size: 1.1rem;
           letter-spacing: 0.05em;
+          color: var(--text-dark);
         }
 
         .logout-link {
@@ -264,13 +265,15 @@ const Dashboard = () => {
           font-size: 2.5rem;
           font-weight: 800;
           margin-bottom: 2rem;
+          color: var(--text-dark);
         }
 
         .health-card, .stats-board {
-          background: rgba(255, 255, 255, 0.1);
+          background: rgba(255, 255, 255, 0.4);
           padding: 3rem;
           border-radius: 20px;
           backdrop-filter: blur(10px);
+          color: var(--text-dark);
         }
 
         .fab-add {
@@ -280,10 +283,10 @@ const Dashboard = () => {
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          background: #E91E63;
+          background: var(--accent-magenta);
           border: none;
           color: white;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px rgba(239, 71, 188, 0.3);
           cursor: pointer;
           display: flex;
           align-items: center;
@@ -303,7 +306,7 @@ const Dashboard = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(0, 0, 0, 0.7);
+          background: rgba(42, 13, 59, 0.3);
           backdrop-filter: blur(10px);
           z-index: 3000;
           opacity: 0;
@@ -321,7 +324,7 @@ const Dashboard = () => {
           bottom: -100%;
           left: 0;
           right: 0;
-          background: #880E4F;
+          background: var(--deep-dark);
           border-radius: 30px 30px 0 0;
           padding: 3rem 2rem;
           transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -343,6 +346,7 @@ const Dashboard = () => {
           text-align: center;
           margin-bottom: 2rem;
           font-weight: 800;
+          color: var(--bg-lilac-light);
         }
 
         .form-group-custom {
@@ -369,7 +373,7 @@ const Dashboard = () => {
         .save-btn {
           width: 100%;
           padding: 1.2rem;
-          background: #FF3D71;
+          background: var(--accent-magenta);
           border: none;
           border-radius: 12px;
           color: white;
