@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useAuth } from '../contexts/AuthContext'
+import { useUser, UserButton } from '@clerk/clerk-react'
 import { periodAPI } from '../services/api'
 import Calendar from '../components/Calendar'
 import BottomNav from '../components/BottomNav'
 
 const Dashboard = () => {
-  const { user, logout } = useAuth()
+  const { user } = useUser()
   const [entries, setEntries] = useState([])
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('calendar')
@@ -17,6 +17,16 @@ const Dashboard = () => {
     symptoms: '',
     notes: '',
   })
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem('user', JSON.stringify({
+        id: user.id,
+        email: user.primaryEmailAddress?.emailAddress,
+        name: user.firstName
+      }))
+    }
+  }, [user])
 
   useEffect(() => {
     fetchEntries()
@@ -155,8 +165,10 @@ const Dashboard = () => {
   return (
     <div className="app-container">
       <header className="app-top-bar">
-        <span className="user-greeting">Hi, {user?.name || 'User'}!</span>
-        <button onClick={logout} className="logout-link">LOGOUT</button>
+        <div className="user-info-section">
+          <span className="user-greeting">Hi, {user?.firstName || 'User'}!</span>
+        </div>
+        <UserButton afterSignOutUrl="/login" />
       </header>
 
       <main className="main-viewport">
